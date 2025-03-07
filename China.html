@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pular Na China</title>
+    <style>
+        body {
+            background-color: aliceblue;
+        }
+        .ChinaEmoji {
+            width: 10%;
+            display:inline-block;
+        }
+        #Titulo {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            display:inline-block;
+            font-size: 550%;
+        }
+        #headP {
+            text-align: center;
+            margin-top: 10%;
+        }
+        #Count {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-align: center;
+            font-size: 140px;
+        }
+        #descrição {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <img src="BackgroundChina.png" style="position: fixed; width: 100%; z-index: -10; opacity: 3%;"><img>
+    <div id="headP">
+    <img class="ChinaEmoji" src="China.png"><img>
+    <h1 id="Titulo">Vamos Todos Pular Na China</h1>
+    <img class="ChinaEmoji" src="China.png"><img>
+    </div>
+    <h1 id="Count">China</h1>
+    <h1 id="descrição">Junte-se a nossa campanha de pular na china para mudarmos o curso do planeta! Com a ajuda de todos podemos fazer a diferença.<h1>
+    <script>
+var countDownDate = new Date("Mar 20, 2025 12:53:00").getTime();
+
+var x = setInterval(function() {
+
+var now = new Date().getTime();
+
+var distance = countDownDate - now;
+
+var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  document.getElementById("Count").innerHTML = days + ":" + hours + ":" + minutes + ":" + seconds;
+  if (distance < 0) {
+clearInterval(x);
+document.getElementById("Count").innerHTML = "PULEM!!!";
+  }
+}, 1000);
+    </script>
+</body>
+</html>
